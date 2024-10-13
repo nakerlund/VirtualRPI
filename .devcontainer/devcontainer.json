@@ -1,0 +1,11 @@
+{
+  "name": "Vertual RPI IoT",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "devcontainer",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "customizations": {
+    "settings": {
+      "terminal.integrated.defaultProfile.linux": "bash"
+    }
+  }
+}

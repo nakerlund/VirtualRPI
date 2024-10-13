@@ -1,0 +1,25 @@
+services:
+  devcontainer:
+    hostname: dev_container
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ../..:/workspaces:cached
+    networks:
+      - local
+    command: sleep infinity
+
+  rpi:
+    hostname: rpi
+    image: ptrsr/pi-ci
+    volumes:
+      - ../dist:/dist
+    restart: unless-stopped
+    networks:
+      - local
+    command: start
+
+networks:
+  local:
+    driver: bridge
