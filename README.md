@@ -9,8 +9,6 @@ Dessa tjänster startas och har båda användarnamn "admin" med lösenordet "pas
 
 Denna övning går ut på att ansluta den virtuella Raspberry Pi enheten till InfluxDb och skicka upp sensor data.
 
-Inlämningsuppgiften är att ladda in ett screen shot med data i Grafana.
-
 ## Steg för steg
 
 Skapa en api nyckel i [InfluxDb](http://localhost:8086) och skriv in den i variabeln `token` i [influxdb-demo-client.py](influxdb-demo-client.py).
@@ -51,6 +49,10 @@ Klicka i battery_data och battery_measurment och sen på knappen submit.
 
 Öppna [Grafana](http://localhost:3000) och lägg till en InfluxDB data source.
 Kör gärna med `Flux`och använd samma credential som användes i [influxdb-demo-client.py](influxdb-demo-client.py).
+
+Quary language: Flux
+Url: http://influxdb:8086
+Organization: my-org
 
 Verifiera att Grafana hämtas data från InfluxDb genom att köra frågan i explore data:
 ```Flux
